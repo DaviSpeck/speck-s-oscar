@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "react-router-dom"
 
-const HomeCard = ({ item: { id, cover, name, rating, time, desc, starring, genres, tags, video } }) => {
+const HomeCard = ({ item: { id, cover, name, rating, time, desc, director, country, genres, releaseYear, video } }) => {
   return (
     <>
       <div className='box'>
@@ -13,37 +12,102 @@ const HomeCard = ({ item: { id, cover, name, rating, time, desc, starring, genre
             <h1>{name}</h1>
             <div className='rating flex'>
               <div className='rate'>
-                <i className='fas fa-star'></i>
-                <i className='fa fa-star'></i>
-                <i className='fa fa-star'></i>
-                <i className='fa fa-star'></i>
-                <i className='fa fa-star-half'></i>
+                {rating >= 4.7 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                  </>
+                }
+                {rating >= 4.3 && rating <= 4.6 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star-half'></i>
+                  </>
+                }
+                {rating >= 3.8 && rating <= 4.2 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                  </>
+                }
+                {rating >= 3.3 && rating <= 3.6 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star-half'></i>
+                  </>
+                }
+                {rating >= 2.8 && rating <= 3.2 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                  </>
+                }
+                {rating >= 2.3 && rating <= 2.6 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star-half'></i>
+                  </>
+                }
+                {rating >= 1.8 && rating <= 2.2 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star'></i>
+                  </>
+                }
+                {rating >= 1.3 && rating <= 1.6 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                    <i className='fa fa-star-half'></i>
+                  </>
+                }
+                {rating >= 0.8 && rating <= 1.2 &&
+                  <>
+                    <i className='fa fa-star'></i>
+                  </>
+                }
+                {rating <= 0.7 &&
+                  <>
+                    <i className='fa fa-star-half'></i>
+                  </>
+                }
               </div>
-              <label>{rating}(Imdb)</label>
-              <span>GP</span>
-              <label>{time}</label>
+              <label>{rating}</label>
+              <label>Duração: {time}</label>
             </div>
             <p>{desc}</p>
             <div className='cast'>
               <h4>
-                <span>Starring </span>
-                {starring}
+                <span>Diretor:</span>
+                {director}
               </h4>
               <h4>
-                <span>Genres </span>
+                <span>País:</span>
+                {country}
+              </h4>
+              <h4>
+                <span>Ano de lançamento:</span>
+                {releaseYear}
+              </h4>
+              <h4>
+                <span>Gêneros:</span>
                 {genres}
               </h4>
-              <h4>
-                <span>Tags </span>
-                {tags}
-              </h4>
             </div>
-            <button className='primary-btn'>
-              <i className='fas fa-play'></i> PLAY NOW
-            </button>
           </div>
           <div className='palyButton row'>
-            <Link to={`/singlepage/${id}`}>
+            <a href={video} target="_blank">
               <button>
                 <div className='img'>
                   <img src='./images/play-button.png' alt='' />
@@ -51,7 +115,7 @@ const HomeCard = ({ item: { id, cover, name, rating, time, desc, starring, genre
                 </div>
                 Assistir ao trailer
               </button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
