@@ -32,7 +32,7 @@
   object-fit: cover;
 }
 .homeContainer .content {
-  padding: 100px;
+  padding: 10px 15vh 0 15vh;
 }
 .homeContainer h1 {
   font-size: 5rem;
@@ -122,12 +122,29 @@
   letter-spacing: 2px;
   transition: 0.5s;
 }
-.mragin {
+.margin {
   margin-top: 50%;
+}
+.selectSort {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+  position: relative;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+.selectSort select {
+  margin-left: 10px;
+}
+.selectSort span {
+  color: #e50813;
+  font-size: 16px;
+  font-weight: 400;
 }
 @media only screen and (max-width: 768px) {
   .homeContainer h1 {
     font-size: 50px;
+    height: 70px;
+    width: 70vw;
     margin: 0;
   }
   .home {
@@ -141,7 +158,10 @@
   }
   .home .content {
     flex-direction: column;
-    padding: 50px;
+    padding: 75px;
+  }
+  .homeContainer .content {
+    height: 92vh;
   }
   .home .row {
     width: 100%;
@@ -149,7 +169,7 @@
   .home .palyButton {
     display: none;
   }
-  .mragin {
+  .margin {
     margin-top: 0% !important;
   }
   .slick-track {
