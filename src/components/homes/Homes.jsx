@@ -4,7 +4,7 @@ import { homeData } from "../../dummyData"
 import Home from "./Home"
 
 const Homes = () => {
-  const [items] = useState(homeData)
+  const [items, setItems] = useState(homeData)
 
   return (
     <>
