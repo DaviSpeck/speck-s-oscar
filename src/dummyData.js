@@ -154,5 +154,5 @@ export const homeData = [
     releaseYear: 2019,
     cover: "../images/home12.jpg",
     video: "https://www.youtube.com/watch?v=Go3OQn1YomI",
-  },
+  }
 ]
