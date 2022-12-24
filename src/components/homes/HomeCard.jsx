@@ -5,7 +5,7 @@ const HomeCard = ({ item: { id, cover, name, rating, time, desc, director, count
     <>
       <div className='box'>
         <div className='coverImage'>
-          <img src={cover} alt='' />
+          <img src={cover} alt='image of the current film' />
         </div>
         <div className='content flex'>
           <div className='details row'>
@@ -107,11 +107,11 @@ const HomeCard = ({ item: { id, cover, name, rating, time, desc, director, count
             </div>
           </div>
           <div className='palyButton row'>
-            <a href={video} target="_blank">
+            <a href={video} target="_blank" rel="noreferrer">
               <button>
                 <div className='img'>
-                  <img src='./images/play-button.png' alt='' />
-                  <img src='./images/play.png' className='change' />
+                  <img src='./images/play-button.png' alt=''/>
+                  <img src='./images/play.png' className='change' alt=''/>
                 </div>
                 Assistir ao trailer
               </button>
