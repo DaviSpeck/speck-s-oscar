@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/src",
+    "public": "src",
     "site": "speck-s-oscar",
     "ignore": [
       "firebase.json",
