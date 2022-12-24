@@ -158,7 +158,7 @@
   }
   .home .content {
     flex-direction: column;
-    padding: 75px;
+    padding: 15px 75px 0 75px;
   }
   .homeContainer .content {
     height: 92vh;
